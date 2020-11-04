@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'TODOアプリ',
       home: ChangeNotifierProvider<MainModel>(
-        create: (_) => MainModel()..getTodoList(),
+        create: (_) => MainModel()..getTodoListRealTime(),
         child: Scaffold(
           appBar: AppBar(
             title: Text('TODOアプリ'),
